@@ -1,3 +1,4 @@
+package g53sqm.jibble;
 /* 
 Copyright Paul James Mutton, 2001-2004, http://www.jibble.org/
 
@@ -40,6 +41,15 @@ public class WebServer {
             throw new WebServerException("The specified root directory does not exist or is not a directory.");
         }
         _port = port;
+        
+        System.out.println("Jibble web server (modified by Theanmozhi Subramaniam (khcy3taa) for G53SQM)");
+        try { 
+        		System.out.println("Root Directory: " +_rootDir.getCanonicalPath());
+        		
+        } catch (IOException e) {
+        	e.printStackTrace();
+        }
+        System.out.println("Port: " +_port);
     }
     
     public void activate() throws WebServerException {
